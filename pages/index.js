@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from "../components/Header";
+import Nav from "../components/Nav";
+import React from "react";
+import Results from "/components/Results";
 
 export default function Home() {
     return (
@@ -12,6 +15,18 @@ export default function Home() {
             </Head>
 
             <Header></Header>
+            <Nav></Nav>
+            <Results></Results>
         </div>
     )
+}
+
+export const getServerSideProps = async (context) => {
+    console.log(context);
+
+    return {
+        props : {
+
+        }
+    }
 }
